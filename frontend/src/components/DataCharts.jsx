@@ -38,7 +38,7 @@ const DataCharts = ({ segments }) => {
   };
 
   return (
-    <div className="glass-card chart-container" style={{ gridColumn: 'span 12' }}>
+    <div className="glass-card chart-container">
       <div className="section-title">
         <PieChartIcon size={24} color="var(--accent-secondary)" />
         <h2>Fiyat Segmenti Dağılımı</h2>

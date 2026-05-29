@@ -10,7 +10,7 @@ const CityRankings = ({ cities }) => {
   }
 
   return (
-    <div className="glass-card table-container" style={{ gridColumn: 'span 12' }}>
+    <div className="glass-card table-container">
       <div className="section-title">
         <MapPin size={24} color="var(--accent-primary)" />
         <h2>Karar Destek Modeli: Şehir Sıralamaları</h2>
