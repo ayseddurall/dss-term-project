@@ -1,0 +1,254 @@
+{
+    "sheet_names": [
+        "raw_data",
+        "processed_data",
+        "decision_model",
+        "dashboard",
+        "cover_and_guide"
+    ],
+    "raw_data": {
+        "columns": [
+            "satici_tip",
+            "Metrekare",
+            "Oda_Sayisi",
+            "il",
+            "Ilce",
+            "Mahalle",
+            "Tarih",
+            "fiyat"
+        ],
+        "row_count": 15276,
+        "sample_data": [
+            {
+                "satici_tip": "Sahibinden",
+                "Metrekare": 160.0,
+                "Oda_Sayisi": "3.5+1",
+                "il": "Istanbul",
+                "Ilce": "Şişli",
+                "Mahalle": "Esentepe",
+                "Tarih": "25 Mayıs  2025",
+                "fiyat": 8750000
+            },
+            {
+                "satici_tip": "Sahibinden",
+                "Metrekare": 85.0,
+                "Oda_Sayisi": "2+1",
+                "il": "Istanbul",
+                "Ilce": "Kartal",
+                "Mahalle": "Topselvi",
+                "Tarih": "25 Mayıs  2025",
+                "fiyat": 4899000
+            },
+            {
+                "satici_tip": "Sahibinden",
+                "Metrekare": 110.0,
+                "Oda_Sayisi": "3+1",
+                "il": "Istanbul",
+                "Ilce": "Tuzla",
+                "Mahalle": "Aydınlı",
+                "Tarih": "24 Mayıs  2025",
+                "fiyat": 5900000
+            }
+        ]
+    },
+    "processed_data": {
+        "columns": [
+            "satici_tip",
+            "Metrekare",
+            "Oda_Sayisi",
+            "il",
+            "Ilce",
+            "Mahalle",
+            "Tarih",
+            "fiyat",
+            "metrekare_fiyati",
+            "fiyat_segmenti",
+            "ilan_yili",
+            "ilanin_ayi"
+        ],
+        "row_count": 15276,
+        "sample_data": [
+            {
+                "satici_tip": "Sahibinden",
+                "Metrekare": 160.0,
+                "Oda_Sayisi": "3.5+1",
+                "il": "Istanbul",
+                "Ilce": "Şişli",
+                "Mahalle": "Esentepe",
+                "Tarih": "25 Mayıs  2025",
+                "fiyat": 8750000,
+                "metrekare_fiyati": 54687.5,
+                "fiyat_segmenti": "Lüks",
+                "ilan_yili": 2025,
+                "ilanin_ayi": "Mayıs"
+            },
+            {
+                "satici_tip": "Sahibinden",
+                "Metrekare": 85.0,
+                "Oda_Sayisi": "2+1",
+                "il": "Istanbul",
+                "Ilce": "Kartal",
+                "Mahalle": "Topselvi",
+                "Tarih": "25 Mayıs  2025",
+                "fiyat": 4899000,
+                "metrekare_fiyati": 57635.29411764706,
+                "fiyat_segmenti": "Orta Segment",
+                "ilan_yili": 2025,
+                "ilanin_ayi": "Mayıs"
+            },
+            {
+                "satici_tip": "Sahibinden",
+                "Metrekare": 110.0,
+                "Oda_Sayisi": "3+1",
+                "il": "Istanbul",
+                "Ilce": "Tuzla",
+                "Mahalle": "Aydınlı",
+                "Tarih": "24 Mayıs  2025",
+                "fiyat": 5900000,
+                "metrekare_fiyati": 53636.36363636364,
+                "fiyat_segmenti": "Orta Segment",
+                "ilan_yili": 2025,
+                "ilanin_ayi": "Mayıs"
+            }
+        ]
+    },
+    "decision_model": {
+        "columns": [
+            "Karar Destek Sistemi – Şehir Seçim Modeli",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Unnamed: 9",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "Unnamed: 12",
+            "Unnamed: 13"
+        ],
+        "row_count": 25,
+        "sample_data": [
+            {
+                "Karar Destek Sistemi – Şehir Seçim Modeli": NaN,
+                "Unnamed: 1": NaN,
+                "Unnamed: 2": NaN,
+                "Unnamed: 3": NaN,
+                "Unnamed: 4": NaN,
+                "Unnamed: 5": NaN,
+                "Unnamed: 6": NaN,
+                "Unnamed: 7": NaN,
+                "Unnamed: 8": NaN,
+                "Unnamed: 9": NaN,
+                "Unnamed: 10": NaN,
+                "Unnamed: 11": NaN,
+                "Unnamed: 12": NaN,
+                "Unnamed: 13": NaN
+            },
+            {
+                "Karar Destek Sistemi – Şehir Seçim Modeli": "Kriter",
+                "Unnamed: 1": "Ağırlık",
+                "Unnamed: 2": NaN,
+                "Unnamed: 3": "Şehir",
+                "Unnamed: 4": "İlan Sayısı",
+                "Unnamed: 5": "Ortalama Fiyat",
+                "Unnamed: 6": "Ortalama m²",
+                "Unnamed: 7": "Ortalama m² Fiyatı",
+                "Unnamed: 8": "Fiyat Puanı",
+                "Unnamed: 9": "m² Puanı",
+                "Unnamed: 10": "m² Fiyat Puanı",
+                "Unnamed: 11": "Toplam Skor",
+                "Unnamed: 12": "Sıralama",
+                "Unnamed: 13": "Karar"
+            },
+            {
+                "Karar Destek Sistemi – Şehir Seçim Modeli": "Düşük Ortalama Fiyat",
+                "Unnamed: 1": 0.4,
+                "Unnamed: 2": NaN,
+                "Unnamed: 3": "Afyonkarahisar",
+                "Unnamed: 4": 1010,
+                "Unnamed: 5": 3169159.896039604,
+                "Unnamed: 6": 117.4930693069307,
+                "Unnamed: 7": 28104.80954599322,
+                "Unnamed: 8": NaN,
+                "Unnamed: 9": NaN,
+                "Unnamed: 10": NaN,
+                "Unnamed: 11": NaN,
+                "Unnamed: 12": NaN,
+                "Unnamed: 13": NaN
+            }
+        ]
+    },
+    "dashboard": {
+        "columns": [
+            "Real Estate DSS Dashboard",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8"
+        ],
+        "row_count": 25,
+        "sample_data": [
+            {
+                "Real Estate DSS Dashboard": NaN,
+                "Unnamed: 1": NaN,
+                "Unnamed: 2": NaN,
+                "Unnamed: 3": NaN,
+                "Unnamed: 4": NaN,
+                "Unnamed: 5": NaN,
+                "Unnamed: 6": NaN,
+                "Unnamed: 7": NaN,
+                "Unnamed: 8": NaN
+            },
+            {
+                "Real Estate DSS Dashboard": "Toplam İlan",
+                "Unnamed: 1": NaN,
+                "Unnamed: 2": "Ortalama Fiyat",
+                "Unnamed: 3": NaN,
+                "Unnamed: 4": "Ortalama m²",
+                "Unnamed: 5": NaN,
+                "Unnamed: 6": "En İyi Şehir",
+                "Unnamed: 7": NaN,
+                "Unnamed: 8": "En Yüksek Skor"
+            },
+            {
+                "Real Estate DSS Dashboard": NaN,
+                "Unnamed: 1": NaN,
+                "Unnamed: 2": NaN,
+                "Unnamed: 3": NaN,
+                "Unnamed: 4": NaN,
+                "Unnamed: 5": NaN,
+                "Unnamed: 6": NaN,
+                "Unnamed: 7": NaN,
+                "Unnamed: 8": NaN
+            }
+        ]
+    },
+    "cover_and_guide": {
+        "columns": [
+            "DSS Ödev Kapağı ve Kullanım Rehberi",
+            "Unnamed: 1"
+        ],
+        "row_count": 19,
+        "sample_data": [
+            {
+                "DSS Ödev Kapağı ve Kullanım Rehberi": NaN,
+                "Unnamed: 1": NaN
+            },
+            {
+                "DSS Ödev Kapağı ve Kullanım Rehberi": "Proje Adı",
+                "Unnamed: 1": "Real Estate Decision Support System"
+            },
+            {
+                "DSS Ödev Kapağı ve Kullanım Rehberi": NaN,
+                "Unnamed: 1": NaN
+            }
+        ]
+    }
+}
