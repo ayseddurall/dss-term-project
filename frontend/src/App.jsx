@@ -21,7 +21,11 @@ function App() {
     
     // decision_raw starts real data at index 3
     const decisionRows = appData.decision_raw.slice(3)
-    const validCities = decisionRows.filter(row => row["3"] && row["3"] !== "Not" && row["0"] !== "Toplam" && row["3"] !== "")
+    const validCities = decisionRows.filter(row => {
+      const isCityValid = row["3"] && row["3"] !== "Not" && row["0"] !== "Toplam" && row["3"] !== ""
+      const hasValidScore = !isNaN(parseFloat(row["11"]))
+      return isCityValid && hasValidScore
+    })
     
     // Sort by Total Score (col 11) descending
     const rankedCities = [...validCities].sort((a, b) => {
