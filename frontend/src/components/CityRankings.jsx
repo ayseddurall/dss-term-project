@@ -28,7 +28,6 @@ const CityRankings = ({ cities }) => {
             <th>Ortalama Fiyat</th>
             <th>Ort. m²</th>
             <th>Ort. m² Fiyatı</th>
-            <th>Toplam Skor</th>
             <th>Karar</th>
           </tr>
         </thead>
@@ -45,9 +44,6 @@ const CityRankings = ({ cities }) => {
               <td>{formatCurrency(city["5"])}</td>
               <td>{formatNumber(city["6"])}</td>
               <td>{formatCurrency(city["7"])}</td>
-              <td style={{ fontWeight: 700, color: 'var(--accent-primary)' }}>
-                {parseFloat(city["11"]).toFixed(2)}
-              </td>
               <td>
                 <span style={{
                   padding: '4px 10px',

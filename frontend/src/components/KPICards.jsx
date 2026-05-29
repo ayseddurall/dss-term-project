@@ -42,14 +42,6 @@ const KPICards = ({ kpis }) => {
         </div>
         <div className="kpi-value">{kpis.bestCity}</div>
       </div>
-
-      <div className="glass-card kpi-card">
-        <div className="kpi-header">
-          <span>En Yüksek Skor</span>
-          <div className="kpi-icon" style={{color: '#ec4899', background: 'rgba(236, 72, 153, 0.1)'}}><Target size={24} /></div>
-        </div>
-        <div className="kpi-value">{kpis.bestScore}</div>
-      </div>
     </div>
   )
 }
