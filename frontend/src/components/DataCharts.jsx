@@ -22,6 +22,21 @@ const DataCharts = ({ segments }) => {
     return null;
   };
 
+  const total = data.reduce((sum, entry) => sum + entry.value, 0);
+
+  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+    const RADIAN = Math.PI / 180;
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
+    return (
+      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" style={{ fontSize: '12px', fontWeight: 'bold' }}>
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    );
+  };
+
   return (
     <div className="glass-card chart-container" style={{ gridColumn: 'span 12' }}>
       <div className="section-title">
@@ -40,6 +55,8 @@ const DataCharts = ({ segments }) => {
               paddingAngle={5}
               dataKey="value"
               stroke="none"
+              labelLine={false}
+              label={renderCustomizedLabel}
             >
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
