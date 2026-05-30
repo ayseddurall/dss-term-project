@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
-import { LayoutDashboard, TrendingUp, MapPin } from 'lucide-react'
+import { LayoutDashboard } from 'lucide-react'
 import KPICards from './components/KPICards'
 import CityRankings from './components/CityRankings'
 import DataCharts from './components/DataCharts'
+import TurkeyPriceMap from './components/TurkeyPriceMap'
 import appData from './app_data.json'
 import './index.css'
 
@@ -10,15 +11,6 @@ function App() {
   const [data, setData] = useState(null)
   
   useEffect(() => {
-    // Process raw JSON data into clean usable structures
-    
-    // 1. Process KPI from dashboard_raw
-    // In our excel dashboard_raw:
-    // row 2: [Toplam İlan, "", Ortalama Fiyat, "", Ortalama m², "", En İyi Şehir, "", En Yüksek Skor]
-    // row x (we don't have the values directly here if they were calculated, wait we extracted head(10)). 
-    // Actually, dashboard_raw might not have the values because they were formulas that pandas didn't evaluate. 
-    // Let's just calculate them from sample_listings and decision_raw!
-    
     // decision_raw starts real data at index 3
     const decisionRows = appData.decision_raw.slice(3)
     const validCities = decisionRows.filter(row => row["3"] && row["3"] !== "Not" && row["0"] !== "Toplam" && row["3"] !== "")
@@ -58,7 +50,8 @@ function App() {
       kpis: kpiData,
       cities: rankedCities,
       segments: appData.segment_counts,
-      listings: appData.sample_listings
+      listings: appData.sample_listings,
+      cityPrices: appData.city_avg_prices
     })
   }, [])
 
@@ -81,6 +74,7 @@ function App() {
 
       <main className="dashboard-grid">
         <KPICards kpis={data.kpis} />
+        <TurkeyPriceMap cityPrices={data.cityPrices} />
         <DataCharts segments={data.segments} />
         <CityRankings cities={data.cities} />
       </main>

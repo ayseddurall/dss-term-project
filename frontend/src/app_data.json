@@ -1937,5 +1937,30 @@
         "Lüks": 1370,
         "Ultra Lüks": 418
     },
-    "total_listings_count": 15276
+    "total_listings_count": 15276,
+    "city_avg_prices": {
+        "Afyonkarahisar": 3169159.9,
+        "Ardahan": 2751936.94,
+        "Artvin": 3000989.9,
+        "Aydin": 4167251.69,
+        "Bayburt": 2700707.29,
+        "Bilecik": 2878746.29,
+        "Bingol": 3466809.52,
+        "Bursa": 4376296.01,
+        "Canakkale": 4006500.0,
+        "Diyarbakir": 4014119.8,
+        "Duzce": 2952380.95,
+        "Erzurum": 3147986.41,
+        "Hakkari": 2442500.0,
+        "Hatay": 3598026.18,
+        "Istanbul": 6039803.55,
+        "Kilis": 2169054.26,
+        "Mugla": 7440271.35,
+        "Osmaniye": 2901990.52,
+        "Samsun": 3709812.44,
+        "Sinop": 3398000.0,
+        "Tunceli": 4042222.22,
+        "Usak": 3260157.25,
+        "Van": 3329845.38
+    }
 }
