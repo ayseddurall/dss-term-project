@@ -102,6 +102,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: 24px;
 }
 
+.dashboard-grid > * {
+  min-width: 0; /* Prevents grid items from overflowing the track size */
+}
+
 /* KPI Cards */
 .kpi-container {
   grid-column: span 12;
