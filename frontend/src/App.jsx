@@ -33,8 +33,8 @@ function App() {
     const bestCityName = rankedCities.length > 0 ? rankedCities[0]["3"] : "N/A"
     const bestScore = rankedCities.length > 0 ? parseFloat(rankedCities[0]["11"]).toFixed(2) : "0"
     
-    // calculate total listings from decision data (col 4)
-    const totalListings = validCities.reduce((acc, row) => acc + (parseInt(row["4"]) || 0), 0)
+    // Get total listings directly from the full processed data count
+    const totalListings = appData.total_listings_count || validCities.reduce((acc, row) => acc + (parseInt(row["4"]) || 0), 0)
     
     // calculate average price from decision data
     let sumPrices = 0;

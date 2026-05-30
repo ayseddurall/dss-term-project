@@ -21,7 +21,8 @@ output = {
     "dashboard_raw": dashboard_data,
     "decision_raw": decision_data,
     "sample_listings": sample_data,
-    "segment_counts": segment_counts
+    "segment_counts": segment_counts,
+    "total_listings_count": len(df_processed)
 }
 
 with open('app_data.json', 'w', encoding='utf-8') as f:
